@@ -34,17 +34,15 @@
             <div class="d-grid gap-2 col-6 mx-auto">
                 <button type="submit" class="btn btn-dark">Signup</button>
             </div>
-
             <div class="alert alert-danger mt-2" role="alert" id="error" style="visibility:hidden">
                 Passwords Do Not Match
             </div>
-
             <?php
-                if(isset($_GET['failed'])){
-                    echo("<div class='alert alert-danger mt-2' role='alert' id='failed' >
+            if (isset($_GET['failed'])) {
+                echo ("<div class='alert alert-danger mt-2' role='alert' id='failed' >
                         User Already Exists
                     </div>");
-                }
+            }
             ?>
             <!-- Option 1: Bootstrap Bundle with Popper -->
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
@@ -59,17 +57,15 @@
                 document.getElementById("error").style.visibility = "visible";
                 return false;
             } else {
-               return true;
+                return true;
             }
         }
-
         function hideError() {
-            document.getElementById("error").style.visibility="hidden";
+            document.getElementById("error").style.visibility = "hidden";
             hideFailed()
         }
         function hideFailed() {
-            document.getElementById("failed").style.visibility="hidden";
-
+            document.getElementById("failed").style.visibility = "hidden";
         }
     </script>
 </body>
